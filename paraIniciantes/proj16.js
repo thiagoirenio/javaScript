@@ -8,7 +8,7 @@ let num2 = 0.1;// number
 num1 += num2;// num1 = num1 + num2
 
 console.log(num1);
-console(Number.isInteger(num1));
+console.dir(Number.isInteger(num1));
 
 // Altera o valor de num1 temporariamente
 // console.log(num1.toString() + num2);
