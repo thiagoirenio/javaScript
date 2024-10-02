@@ -1,4 +1,3 @@
-var oi = 'oi';
-var dois = 2;
+var oi = 'oi, amigo';
 
 console.log(oi);
