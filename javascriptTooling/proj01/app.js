@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname)));
 
 // Rota raiz, redireciona para o arquivo index.html na pasta public
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 app.listen(port, () => {

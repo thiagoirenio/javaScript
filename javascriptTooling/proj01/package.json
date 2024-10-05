@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel ./main.js -o ./bundle.js --presets=@babel/env -w",
+    "start": "node app.js",
+    "dev": "concurrently \"npm start\" \"open http://localhost:3000\""
   },
   "keywords": [],
   "author": "",
