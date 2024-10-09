@@ -18,3 +18,6 @@ cd //wsl.localhost/Fedora/home/thiago/javaScript
 
 <-- Caminho do bash para o windows-->
 cd c:/Users/'thiago irenio'/Downloads/javaScript
+
+git config --global core.autocrlf true
+git config --global core.eol lf

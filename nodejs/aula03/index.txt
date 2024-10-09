@@ -1,0 +1,9 @@
+2.    1.    0
+major minor patch
+
+major -> atualizações que quebram o sistema
+minor -> atualizações que implementa novas funcionalidades sem quebrar o sistema
+patch -> atualizações que corrigem bugs
+
+^ -> significa que atualiza apenas na minor e na patch
+~ -> significa que atualiza apenas na patch com correções de bugs
