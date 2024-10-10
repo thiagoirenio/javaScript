@@ -1,0 +1,13 @@
+node inspect nome-do-seu-arquivo.js
+
+o que você está vendo é a interface de depuração do Node.js isso indica que o depurador está ativo e parou a execução do código no ponto de início na primeira linha
+a linha 1 (> 1) está marcada com '>' indicando que o depurador parou exatamente aqui
+esse é o ponto onde a execução está pausada
+
+- Como faço para avançar a execução para uma linha específica?
+
+no depurador padrão do Node.js  não há um comando direto para pular para uma linha específica, mas você pode usar algumas estratégias para chegar lá
+a ideia é utilizar breakpoints ou comandos como next (n) e continue (c) para avançar até a linha desejada
+você pode usar o comando next (n) para avançar linha a linha até a linha específica
+isso é útil se você estiver apenas algumas linhas à frente
+porém pode ser trabalhoso se a linha estiver muito distante e o código for grande
