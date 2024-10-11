@@ -8,24 +8,22 @@ async function readdir(rootDir) {
 }
 
 async function walk(files, rootDir) {
-  for (let file of files) {
+  for(let file of files) {
     const fileFullPath = path.resolve(rootDir, file);
     const stats = await fs.stat(fileFullPath);
 
     if (/\.git/g.test(fileFullPath)) continue;
     if (/node_modules/g.test(fileFullPath)) continue;
 
-    if (stats.isDirectory()) {
+    if(stats.isDirectory()) {
       readdir(fileFullPath);
       continue;
     }
 
     if (
-      !/\.html$/g.test(fileFullPath) && !/\.css$/g.test(fileFullPath)
+      !/\.html$/g.test(fileFullPath)
     ) continue;
-    console.log(fileFullPath, stats.isDirectory());
+    console.log(fileFullPath);
   }
 }
-readdir('/home/thiago/javaScript/nodejs/aula04/');
-
-
+readdir('/media/luizotavio/Externo/JS/');

@@ -20,12 +20,8 @@ async function walk(files, rootDir) {
       continue;
     }
 
-    if (
-      !/\.html$/g.test(fileFullPath) && !/\.css$/g.test(fileFullPath)
-    ) continue;
+    if (/\.css$/g.test(fileFullPath)) continue;
     console.log(fileFullPath, stats.isDirectory());
   }
 }
 readdir('/home/thiago/javaScript/nodejs/aula04/');
-
-
