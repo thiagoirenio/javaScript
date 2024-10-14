@@ -12,11 +12,7 @@ function meuMiddleware(req, res, next) {
 }
 
 /* Rotas da home */
-route.get('/', meuMiddleware, homeController.paginaInicial, function (req, res, next) {
-  console.log();
-  console.log('Ainda estou aqui...');
-  console.log(`Olha o que tem na req.session.nome ${req.session.nome}`);
-});
+route.get('/', homeController.paginaInicial);
 route.post('/', homeController.trataPost);
 
 /* Rotas de contato*/
