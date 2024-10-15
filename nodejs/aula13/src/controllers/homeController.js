@@ -4,6 +4,7 @@ exports.paginaInicial = (req, res) => {
   return;
 };
 
-exports.trataPost = (req, rest) => {
-  res.send('Ei, sou a sua nova roda de POSTS.');
+exports.trataPost = (req, res) => {
+  res.send(req.body);
+  return;
 };
