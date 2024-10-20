@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.CONNECTIONSTRING)
   .then(() => {
     app.emit('pronto');
   })
@@ -16,14 +16,14 @@ const flash = require('connect-flash');
 
 const routes = require('./routes');
 const path = require('path');
-const { middlewareGlobal } = require('./src/middlewares/middleware');
+const { middlewareGlobal } = require('./src/middlewares/middlewares');
 
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 const sessionOptions = session({
-  secret: 'akasdfj0út23453456+54qt23qv  qwf qwer qwer qewr asdasdasda a6()',
+  secret: 'cafecomleite',
   store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
   resave: false,
   saveUninitialized: false,
@@ -38,7 +38,6 @@ app.use(flash());
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 
-// Nossos próprios middlewares
 app.use(middlewareGlobal);
 app.use(routes);
 
